@@ -1,9 +1,10 @@
 package com.vijay.saurabh.letthevipdown.LoginRegister;
 
+
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,10 +34,12 @@ public class NameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
         Intent intent = getIntent();
-        email = intent.getStringExtra("email");
-        password = intent.getStringExtra("password");
-        et_name = findViewById(R.id.et_name3);
-        btn_name = findViewById(R.id.btn_name) ;
+        if(intent != null) {
+            email = intent.getStringExtra("email");
+            password = intent.getStringExtra("password");
+        }
+        et_name = findViewById(R.id.et_emailupdate);
+        btn_name = findViewById(R.id.btn_updateprofile) ;
         pp = findViewById(R.id.profile_pic);
 
     }
@@ -75,7 +78,7 @@ public class NameActivity extends AppCompatActivity {
 
     public void selectImage(View v)
     {
-        Intent i = new Intent();
+        Intent  i = new Intent();
         i.setAction(Intent.ACTION_GET_CONTENT);
         i.setType("image/*");
         startActivityForResult(i , 12);
