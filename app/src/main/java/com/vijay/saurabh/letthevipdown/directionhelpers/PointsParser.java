@@ -1,10 +1,9 @@
-package com.vijay.saurabh.getconnect.directionhelpers;
+package com.vijay.saurabh.letthevipdown.directionhelpers;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.View;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;

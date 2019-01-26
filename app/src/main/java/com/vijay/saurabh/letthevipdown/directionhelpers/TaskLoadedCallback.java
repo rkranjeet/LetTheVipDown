@@ -1,4 +1,4 @@
-package com.vijay.saurabh.getconnect.directionhelpers;
+package com.vijay.saurabh.letthevipdown.directionhelpers;
 
 /**
  * Created by Vishal on 10/20/2018.

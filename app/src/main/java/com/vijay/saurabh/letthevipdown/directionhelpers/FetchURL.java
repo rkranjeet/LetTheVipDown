@@ -1,4 +1,4 @@
-package com.vijay.saurabh.getconnect.directionhelpers;
+package com.vijay.saurabh.letthevipdown.directionhelpers;
 
 import android.content.Context;
 import android.os.AsyncTask;
