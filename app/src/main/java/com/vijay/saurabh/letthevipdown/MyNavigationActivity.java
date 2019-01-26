@@ -256,8 +256,12 @@ public class MyNavigationActivity extends AppCompatActivity
 
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("text/plain");
-            i.putExtra(Intent.EXTRA_TEXT , "My Location is :"+"https://www.google.com/maps/search/?api=1&query="+latLng.latitude+","+latLng.longitude);
-            startActivity(i.createChooser(i , "share using: "));
+            if(latLng!=null) {
+                i.putExtra(Intent.EXTRA_TEXT, "My Location is :" + "https://www.google.com/maps/search/?api=1&query=" + latLng.latitude + "," + latLng.longitude);
+                startActivity(i.createChooser(i, "share using: "));
+            }
+            else
+                Toast.makeText(this, "Please connect to the internet", Toast.LENGTH_SHORT).show();
 
 
         } else if (id == R.id.nav_signout) {
@@ -273,7 +277,7 @@ public class MyNavigationActivity extends AppCompatActivity
 
         }else if(id == R.id.places)
         {
-            Intent i = new Intent(MyNavigationActivity.this,Places.class);
+            Intent i = new Intent(MyNavigationActivity.this, com.vijay.saurabh.letthevipdown.NearbyPlaces.Places.class);
             startActivity(i);
             finish();
         }
