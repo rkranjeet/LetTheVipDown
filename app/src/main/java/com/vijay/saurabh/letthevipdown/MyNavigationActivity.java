@@ -242,15 +242,12 @@ public class MyNavigationActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_mycircle) {
-
-            Intent i = new Intent(MyNavigationActivity.this , CircleTestActivity.class);
-            startActivity(i);
+        if(id == R.id.nav_joincircle)
+        {
 
         }
-        else if (id == R.id.nav_invite_members) {
-
-        } else if (id == R.id.nav_shareloc) {
+        else
+         if (id == R.id.nav_shareloc) {
 
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("text/plain");
