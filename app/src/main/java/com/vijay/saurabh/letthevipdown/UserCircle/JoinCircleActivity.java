@@ -70,10 +70,10 @@ public class JoinCircleActivity extends AppCompatActivity {
                         join_userid = createUsers.getUserid();
                         circlereference = FirebaseDatabase.getInstance().getReference().child("Users").child(join_userid).child("CircleMembers");
 
-                        CircleJoin circleJoin = new CircleJoin(current_user_id) ;
-                        CircleJoin circleJoin1 = new CircleJoin(join_userid) ;
+                        JoinCircle joinCircle = new JoinCircle(current_user_id) ;
+                        JoinCircle joinCircle1 = new JoinCircle(join_userid) ;
 
-                        circlereference.child(user.getUid()).setValue(circleJoin).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        circlereference.child(user.getUid()).setValue(joinCircle).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
 

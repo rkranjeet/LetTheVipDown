@@ -1,14 +1,14 @@
 package com.vijay.saurabh.letthevipdown.UserCircle;
 
-public class CircleJoin {
+public class JoinCircle {
 
     String circlenumberid ;
-    public CircleJoin()
+    public JoinCircle()
     {
 
     }
 
-    public CircleJoin(String circlenumberid)
+    public JoinCircle(String circlenumberid)
     {
         this.circlenumberid = circlenumberid ;
 

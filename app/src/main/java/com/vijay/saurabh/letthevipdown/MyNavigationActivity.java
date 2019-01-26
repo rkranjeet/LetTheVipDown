@@ -47,6 +47,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import com.vijay.saurabh.letthevipdown.UserCircle.JoinCircleActivity;
+import com.vijay.saurabh.letthevipdown.UserCircle.JoinedCirclesActivity;
 
 import java.io.IOException;
 import java.util.List;
