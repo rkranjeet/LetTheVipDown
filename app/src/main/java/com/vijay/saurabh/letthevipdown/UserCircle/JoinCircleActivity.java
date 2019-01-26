@@ -1,4 +1,4 @@
-package com.vijay.saurabh.letthevipdown;
+package com.vijay.saurabh.letthevipdown.UserCircle;
 
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.vijay.saurabh.letthevipdown.LoginRegister.CreateUsers;
+import com.vijay.saurabh.letthevipdown.R;
 
 public class JoinCircleActivity extends AppCompatActivity {
 

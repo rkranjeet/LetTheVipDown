@@ -1,4 +1,4 @@
-package com.vijay.saurabh.letthevipdown;
+package com.vijay.saurabh.letthevipdown.UserCircle;
 
 public class CircleJoin {
 

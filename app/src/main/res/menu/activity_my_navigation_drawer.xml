@@ -11,7 +11,9 @@
             android:id="@+id/nav_joincircle"
 
             android:title="Join Circle" />
-
+        <item
+            android:id="@+id/nav_joinedcircles"
+            android:title="Joined Circles"/>
 
         <item
             android:id="@+id/nav_shareloc"

@@ -30,7 +30,8 @@
         <activity android:name=".LoginRegister.PasswordActivity" />
         <activity android:name=".LoginRegister.NameActivity" />
         <activity android:name=".LoginRegister.InviteCodeActivity" />
-        <activity android:name=".JoinCircleActivity"></activity>
+        <activity android:name=".UserCircle.JoinCircleActivity" />
+        <activity android:name=".JoinedCirclesActivity"></activity>
     </application>
 
 </manifest>

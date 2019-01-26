@@ -46,6 +46,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.vijay.saurabh.letthevipdown.UserCircle.JoinCircleActivity;
 
 import java.io.IOException;
 import java.util.List;
@@ -244,9 +245,12 @@ public class MyNavigationActivity extends AppCompatActivity
 
         if(id == R.id.nav_joincircle)
         {
-
+            startActivity(new Intent(MyNavigationActivity.this, JoinCircleActivity.class));
         }
-        else
+        else if(id == R.id.nav_joinedcircles)
+        {
+            startActivity(new Intent(MyNavigationActivity.this,JoinedCirclesActivity.class));
+        }
          if (id == R.id.nav_shareloc) {
 
             Intent i = new Intent(Intent.ACTION_SEND);
