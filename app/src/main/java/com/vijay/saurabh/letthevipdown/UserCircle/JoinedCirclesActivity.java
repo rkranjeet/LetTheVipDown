@@ -111,4 +111,9 @@ public class JoinedCirclesActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(JoinedCirclesActivity.this,MyNavigationActivity.class));
+        finish();
+    }
 }

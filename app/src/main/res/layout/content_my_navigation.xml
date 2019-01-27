@@ -14,7 +14,7 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".MyNavigationActivity" >
 
     </fragment>
@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorBackgroundFloating"
+        android:orientation="vertical"
         android:layout_margin="8dp">
 
         <fragment
@@ -29,8 +30,23 @@
             android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editMarker" />
+            android:layout_alignEnd="@+id/editMarker"
+            android:layout_alignRight="@+id/editMarker" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="94dp"
+        android:id="@+id/dist"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="94dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/current"
@@ -38,10 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/ic_my_location_black_24dp"
-        >
-
-    </android.support.design.widget.FloatingActionButton>
+        app:srcCompat="@drawable/ic_my_location_black_24dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
