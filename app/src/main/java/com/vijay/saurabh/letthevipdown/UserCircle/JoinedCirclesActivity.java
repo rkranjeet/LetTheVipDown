@@ -97,8 +97,8 @@ public class JoinedCirclesActivity extends AppCompatActivity {
     public static class MyHolder extends RecyclerView.ViewHolder {
         View mView;
         TextView username;
-        CircleImageView profpic;
-        ImageView status;
+        ImageView profpic;
+
 
 
         public MyHolder(@NonNull View itemView) {
@@ -107,8 +107,13 @@ public class JoinedCirclesActivity extends AppCompatActivity {
             mView = itemView;
             username = mView.findViewById(R.id.item_title);
             profpic = mView.findViewById(R.id.item_img);
-            status = mView.findViewById(R.id.item_state);
+
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(JoinedCirclesActivity.this,MyNavigationActivity.class));
+        finish();
+    }
 }
