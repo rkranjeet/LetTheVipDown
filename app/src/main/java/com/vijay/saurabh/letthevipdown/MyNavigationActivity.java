@@ -444,6 +444,11 @@ public class MyNavigationActivity extends AppCompatActivity
             startActivity(i);
             finish();
         }
+        else
+            if(id == R.id.report)
+            {
+                //report the official.
+            }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -27,6 +27,10 @@
     <item android:title="Communicate">
         <menu>
             <item
+                android:id="@+id/report"
+                android:icon="@drawable/ic_report_problem_black_24dp"
+                android:title="Report Official"/>
+            <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Terms $ Conditions" />
