@@ -1,5 +1,6 @@
 package com.vijay.saurabh.letthevipdown;
 
+
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +13,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.karan.churi.PermissionManager.PermissionManager;
 import com.vijay.saurabh.letthevipdown.LoginRegister.LoginActivity;
 import com.vijay.saurabh.letthevipdown.LoginRegister.Register;
-import com.vijay.saurabh.letthevipdown.LoginRegister.LoginActivity;
-import com.vijay.saurabh.letthevipdown.LoginRegister.Register;
-import com.vijay.saurabh.letthevipdown.R;
 
 import java.util.ArrayList;
 
@@ -60,11 +58,13 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent i = new Intent(MainActivity.this , LoginActivity.class);
         startActivity(i);
+        finish();
     }
     public void gotoregister(View v)
     {
         Intent i = new Intent(MainActivity.this , Register.class);
         startActivity(i);
+        finish();
     }
 
 }

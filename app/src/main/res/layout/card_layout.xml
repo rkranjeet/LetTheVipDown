@@ -1,56 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="6dp"
-    card_view:cardElevation="3dp"
-    card_view:cardCornerRadius="12dp"
-    card_view:contentPadding="4dp"
-    android:foreground="?selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="14dp"
-        >
+        app:cardCornerRadius="18dp"
+        app:cardElevation="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
         <LinearLayout
-            android:layout_width="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="10"
-            android:orientation="horizontal"
-            >
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="2"
-                android:src="@drawable/tom"
+            android:padding="5dp"
+            android:background="@drawable/grad_bg"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:id="@+id/item_img"
+                android:background="@drawable/breakbed"
+                android:layout_gravity="center"
 
                 />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:textStyle="bold"
-                android:textSize="22dp"
-                android:padding="10dp"
-                android:text="My User"
-                android:id="@+id/item_title"
-                />
-           <ImageView
-               android:layout_width="0dp"
-               android:layout_height="40dp"
-               android:layout_weight="1"
-               android:src="@drawable/desktop"
-               android:id="@+id/item_state"
-               />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/grad_bg"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saurabh Vijay"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="40dp"
+                    android:id="@+id/item_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    />
+
+
+            </RelativeLayout>
 
         </LinearLayout>
 
 
-    </LinearLayout>
 
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

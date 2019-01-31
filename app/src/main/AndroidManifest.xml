@@ -30,7 +30,6 @@
             android:theme="@style/Base.Theme.AppCompat" />
         <activity android:name=".LoginRegister.LoginActivity" />
         <activity android:name=".LoginRegister.Register" />
-        <activity android:name=".LoginRegister.PasswordActivity" />
         <activity android:name=".LoginRegister.NameActivity" />
         <activity android:name=".LoginRegister.InviteCodeActivity" />
         <activity android:name=".UserCircle.JoinCircleActivity" />

@@ -1,5 +1,6 @@
 package com.vijay.saurabh.letthevipdown.UserCircle;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.vijay.saurabh.letthevipdown.MyNavigationActivity;
 import com.vijay.saurabh.letthevipdown.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -29,6 +31,7 @@ public class JoinedCirclesActivity extends AppCompatActivity {
     RecyclerView rv;
     FirebaseAuth auth;
     FirebaseUser user;
+    String name,imageurl,lat,lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,8 +59,10 @@ public class JoinedCirclesActivity extends AppCompatActivity {
                 ref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String name = (String) dataSnapshot.child("name").getValue();
-                        String imageurl = (String) dataSnapshot.child("imageurl").getValue();
+                         name = (String) dataSnapshot.child("name").getValue();
+                         imageurl = (String) dataSnapshot.child("imageurl").getValue();
+                         lat = (String) dataSnapshot.child("lat").getValue();
+                         lang = (String) dataSnapshot.child("lng").getValue();
                         if(imageurl!=null && name!=null)
                         {
                             viewHolder.username.setText(name);
@@ -70,6 +75,18 @@ public class JoinedCirclesActivity extends AppCompatActivity {
 
                     }
                 });
+
+                viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(JoinedCirclesActivity.this, MyNavigationActivity.class);
+                        i.putExtra("lat",lat);
+                        i.putExtra("lang",lang);
+                        i.putExtra("place",name);
+                        startActivity(i);
+                        finish();
+                    }
+                });
             }
         };
 
@@ -80,8 +97,8 @@ public class JoinedCirclesActivity extends AppCompatActivity {
     public static class MyHolder extends RecyclerView.ViewHolder {
         View mView;
         TextView username;
-        CircleImageView profpic;
-        ImageView status;
+        ImageView profpic;
+
 
 
         public MyHolder(@NonNull View itemView) {
@@ -90,8 +107,13 @@ public class JoinedCirclesActivity extends AppCompatActivity {
             mView = itemView;
             username = mView.findViewById(R.id.item_title);
             profpic = mView.findViewById(R.id.item_img);
-            status = mView.findViewById(R.id.item_state);
+
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(JoinedCirclesActivity.this,MyNavigationActivity.class));
+        finish();
+    }
 }
