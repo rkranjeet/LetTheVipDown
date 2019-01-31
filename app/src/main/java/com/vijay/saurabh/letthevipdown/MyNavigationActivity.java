@@ -448,6 +448,8 @@ public class MyNavigationActivity extends AppCompatActivity
             if(id == R.id.report)
             {
                 //report the official.
+                startActivity(new Intent(MyNavigationActivity.this,ReportOfficialActivity.class));
+
             }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

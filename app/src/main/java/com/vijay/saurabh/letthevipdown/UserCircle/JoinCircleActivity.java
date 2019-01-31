@@ -68,26 +68,28 @@ public class JoinCircleActivity extends AppCompatActivity {
                     {
                         createUsers = childss.getValue(CreateUsers.class) ;
                         join_userid = createUsers.getUserid();
-                        circlereference = FirebaseDatabase.getInstance().getReference().child("Users").child(join_userid).child("CircleMembers");
+                        circlereference = FirebaseDatabase.getInstance().getReference().child("Users").child(join_userid);
 
                         JoinCircle joinCircle = new JoinCircle(current_user_id) ;
                         JoinCircle joinCircle1 = new JoinCircle(join_userid) ;
+                        user = auth.getCurrentUser();
 
-                        circlereference.child(user.getUid()).setValue(joinCircle).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        circlereference.child("CircleMembers").child(user.getUid()).setValue(joinCircle).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
 
                                 if(task.isSuccessful())
                                 {
                                     Toast.makeText(JoinCircleActivity.this, "User has Joined Circle Successfully", Toast.LENGTH_SHORT).show();
+                                    user = auth.getCurrentUser();
+                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
+                                    ref.child("OfficersAdded").child(join_userid).child("officerid").setValue(join_userid);
                                 }
 
                             }
                         });
 
-                        user = auth.getCurrentUser();
-                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
-                        ref.child("OfficersAdded").child(join_userid).child("officerid").setValue(join_userid);
+
 
 
 
